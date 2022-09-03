@@ -15,7 +15,7 @@ def countdown(total, one_lap):
         mins, secs = divmod(remaining_time, 60)
         timer = '{:02d}:{:02d}'.format(mins, secs)
         battery = ((remaining_time + one_lap) / (race_time + one_lap)) * 100
-        print('Time Left: ', timer, '     Battery Lower Limit: ', battery, end="\r")
+        print('Time Left: ', timer, '     Battery Lower Limit: ', round(battery, 1), end="\r")
         time.sleep(1)
         remaining_time -= 1
         
@@ -25,7 +25,7 @@ def countdown(total, one_lap):
         mins, secs = divmod(remaining_time, 60)
         timer = '{:02d}:{:02d}'.format(mins, secs)
         battery = ((-remaining_time + one_lap) / (race_time + one_lap)) * 100
-        print('Time Left: ', timer, '     Battery Lower Limit: ', battery, end="\r")
+        print('Time Left: ', timer, '     Battery Lower Limit: ', round(battery, 1), end="\r")
         time.sleep(1)
         remaining_time += 1
 
