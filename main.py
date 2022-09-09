@@ -19,6 +19,7 @@ def add_time(time_label, t_type):
     global counter
     if t_type == 'hr':
         counter += 3600
+    elif t_type == 'min':
         counter += 60
     else:
         counter += 1
