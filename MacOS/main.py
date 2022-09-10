@@ -77,6 +77,9 @@ def counter_label(time_label, batt_label):
 # start function of the stopwatch
 def Start(time_label, batt_label):
     global running
+    global race_time
+    global counter
+    race_time = counter
     running=True
     counter_label(time_label, batt_label)
     add_hr['state']='disabled'
@@ -102,9 +105,11 @@ def Reset(time_label, batt_label, onelap_label):
     global counter
     global one_lap
     global batt
+    global count_up
     counter = 0
     one_lap = 0
-    batt = 0
+    batt = 100
+    count_up = False
     # If rest is pressed after pressing stop.
     Stop()
     time_label['text'] = '{0:02.0f}:{1:02.0f}:{2:02.0f}'.format(0, 0, 0)
