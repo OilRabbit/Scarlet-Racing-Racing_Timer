@@ -77,6 +77,9 @@ def counter_label(time_label, batt_label):
 # start function of the stopwatch
 def Start(time_label, batt_label):
     global running
+    global race_time
+    global counter
+    race_time = counter
     running=True
     counter_label(time_label, batt_label)
     add_hr['state']='disabled'
@@ -102,9 +105,11 @@ def Reset(time_label, batt_label, onelap_label):
     global counter
     global one_lap
     global batt
+    global count_up
     counter = 0
     one_lap = 0
-    batt = 0
+    batt = 100
+    count_up = False
     # If rest is pressed after pressing stop.
     Stop()
     time_label['text'] = '{0:02.0f}:{1:02.0f}:{2:02.0f}'.format(0, 0, 0)
@@ -113,25 +118,26 @@ def Reset(time_label, batt_label, onelap_label):
    
 root = tk.Tk()
 root.title("Stopwatch")
-   
+
 # Fixing the window size.
 root.minsize(width = 300, height = 100)
-time_label = tk.Label(root, text = '{0:02.0f}:{1:02.0f}:{2:02.0f}'.format(0, 0, 0), fg="black", font="Verdana 30 bold")
+root.configure(bg = 'black')
+time_label = tk.Label(root, text = '{0:02.0f}:{1:02.0f}:{2:02.0f}'.format(0, 0, 0), bg = 'black', fg="white", font="Verdana 30 bold")
 time_label.pack()
-batt_label = tk.Label(root, text = "Batt: %d" % (batt), fg = "black", font = "Verdana 20")
+batt_label = tk.Label(root, text = "Batt: %d" % (batt), bg = 'black', fg="white", font = "Verdana 20")
 batt_label.pack()
-onelap_label = tk.Label(root, text = '{0:02.0f}:{1:02.0f}:{2:02.0f}'.format(0, 0, 0), fg = "black", font = "Verdana 10")
+onelap_label = tk.Label(root, text = '{0:02.0f}:{1:02.0f}:{2:02.0f}'.format(0, 0, 0), bg = 'black', fg="white", font = "Verdana 10")
 onelap_label.pack()
 f = tk.Frame(root)
-add_hr = tk.Button(f, text='+1hr', width=6, command=lambda:add_time(time_label, onelap_label, 'hr', 'counter'))
-add_min = tk.Button(f, text='+1min', width=6, command=lambda:add_time(time_label, onelap_label, 'min', 'counter'))
-add_sec = tk.Button(f, text='+1sec', width=6, command=lambda:add_time(time_label, onelap_label, 'sec', 'counter'))
-add_hr_onelap = tk.Button(f, text='+1hr', width=6, command=lambda:add_time(time_label, onelap_label, 'hr', 'onelap'))
-add_min_onelap = tk.Button(f, text='+1min', width=6, command=lambda:add_time(time_label, onelap_label, 'min', 'onelap'))
-add_sec_onelap = tk.Button(f, text='+1sec', width=6, command=lambda:add_time(time_label, onelap_label, 'sec', 'onelap'))
-start = tk.Button(f, text='Start', width=6, command=lambda:Start(time_label, batt_label))
-stop = tk.Button(f, text='Stop',width=6,state='disabled', command=Stop)
-reset = tk.Button(f, text='Reset',width=6, state='normal', command=lambda:Reset(time_label, batt_label, onelap_label))
+add_hr = tk.Button(f, text='+1hr', fg='black', width=6, command=lambda:add_time(time_label, onelap_label, 'hr', 'counter'))
+add_min = tk.Button(f, text='+1min', fg='black', width=6, command=lambda:add_time(time_label, onelap_label, 'min', 'counter'))
+add_sec = tk.Button(f, text='+1sec', fg='black', width=6, command=lambda:add_time(time_label, onelap_label, 'sec', 'counter'))
+add_hr_onelap = tk.Button(f, text='+1hr', fg='black', width=6, command=lambda:add_time(time_label, onelap_label, 'hr', 'onelap'))
+add_min_onelap = tk.Button(f, text='+1min', fg='black', width=6, command=lambda:add_time(time_label, onelap_label, 'min', 'onelap'))
+add_sec_onelap = tk.Button(f, text='+1sec', fg='black', width=6, command=lambda:add_time(time_label, onelap_label, 'sec', 'onelap'))
+start = tk.Button(f, text='Start', fg='black', width=6, command=lambda:Start(time_label, batt_label))
+stop = tk.Button(f, text='Stop', fg='black', width=6,state='disabled', command=Stop)
+reset = tk.Button(f, text='Reset', fg='black', width=6, state='normal', command=lambda:Reset(time_label, batt_label, onelap_label))
 f.pack(anchor = 'center', pady = 5)
 add_hr.grid(row = 0, column = 0)
 add_min.grid(row = 0, column = 1)
