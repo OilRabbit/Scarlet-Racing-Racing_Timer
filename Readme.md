@@ -17,20 +17,20 @@ When the timer is set and started, the battery status would be 100%.
 After one second, which is the race ends, the battery status will drop to 50% since the driver need to drive one more lap after the end of the race.
 When the driver finished his/her lap, the battery status will drop to 0%.
 
-### For Windows Users:
+## For Windows Users:
 1. Download the 'WindowsOS.zip' file
 2. Unzip it
 3. Open the folder
 4. Open a folder called 'dist'
 5. Open the execution file 'main.exe'
 
-### For Mac Users:
+## For Mac Users:
 1. Download the 'MacOS.zip' file
 2. Unzip it
 3. Open the folder
 4. Open a folder called 'dist'
 5. Open the application file 'main'
 
-### Upcoming Update:
+## Upcoming Update:
 1. Adding Scarlet Racing Icon
 2. Changing the background / background colour
