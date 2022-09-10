@@ -4,7 +4,7 @@
 
 You can download the latest version here：[Latest release](https://github.com/OilRabbit/Scarlet-Racing-Racing_Timer/releases)
 
-### What is this and how to use it？
+## What is this and how to use it？
 - This is a Timer and battery calculator for Formula E Sim Racing
 - It can help engineer to calculate the lower limit of battery of the car
 - The upper three buttons are used to set the total racing time of the race
