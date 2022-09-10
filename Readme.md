@@ -1,4 +1,4 @@
-Racing Timer for Formula E Sim Racing
+*Racing Timer for Formula E Sim Racing*
 
 ![image](https://user-images.githubusercontent.com/72502693/189497799-a1edff50-975d-4e49-b73c-e0ebe5ff1586.png)
 
@@ -30,3 +30,5 @@ For Mac Users:
 3. Open the folder
 4. Open a folder called 'dist'
 5. Open the application file 'main'
+
+
