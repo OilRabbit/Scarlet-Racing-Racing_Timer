@@ -94,7 +94,7 @@ def _path_inject(paths):
     sys.path[:0] = paths
 
 
-_path_inject(['/Users/likayauelwin/Documents/GitHub/Scarlet-Racing-FE-Timer/MacOS'])
+_path_inject(['/Users/likayauelwin/Documents/GitHub/Scarlet-Racing-Racing_Timer/MacOS'])
 
 
 import re
@@ -147,7 +147,7 @@ def _run():
     exec(compile(source, script, "exec"), globals(), globals())
 
 
-DEFAULT_SCRIPT='/Users/likayauelwin/Documents/GitHub/Scarlet-Racing-FE-Timer/MacOS/main.py'
+DEFAULT_SCRIPT='/Users/likayauelwin/Documents/GitHub/Scarlet-Racing-Racing_Timer/MacOS/main.py'
 SCRIPT_MAP={}
 try:
     _run()
