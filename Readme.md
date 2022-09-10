@@ -16,3 +16,17 @@ Assume the total racing time is 1 second, the driver need 1 second to drive a la
 When the timer is set and started, the battery status would be 100%.
 After one second, which is the race ends, the battery status will drop to 50% since the driver need to drive one more lap after the end of the race.
 When the driver finished his/her lap, the battery status will drop to 0%.
+
+For Windows Users:
+1. Download the 'WindowsOS.zip' file
+2. Unzip it
+3. Open the folder
+4. Open a folder called 'dist'
+5. Open the execution file 'main.exe'
+
+For Mac Users:
+1. Download the 'MacOS.zip' file
+2. Unzip it
+3. Open the folder
+4. Open a folder called 'dist'
+5. Open the application file 'main'
