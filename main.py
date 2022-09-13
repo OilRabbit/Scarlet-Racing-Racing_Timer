@@ -1,3 +1,21 @@
+# Steps
+# 1. Get time for one lap and oil used for one lap
+# 2. Get total time
+# 3. Calculate number of laps
+# 4. Calculate total oil used
+# 5. show oil lower limit
+# 6. enable oil adding during timer
+
+# Shows
+# 1. Total oil usage
+# 2. Current oil usage
+# 3. Oil usage per lap
+# 4. Remaining time
+# 5. time per lap
+
+# Buttons add
+# 1. Add oil (per lite and per 0.1 lite)
+
 import tkinter as tk
 from datetime import datetime
 import math
