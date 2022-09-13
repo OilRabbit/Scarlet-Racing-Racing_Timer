@@ -16,8 +16,6 @@
 # Buttons add
 # 1. Add oil (per lite and per 0.1 lite)
 
-#testing message
-
 import tkinter as tk
 from datetime import datetime
 import math
