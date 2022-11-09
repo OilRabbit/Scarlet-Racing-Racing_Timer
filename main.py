@@ -198,7 +198,7 @@ add_min = tk.Button(f, text='+1min', width=6, command=lambda:add_time(time_label
 add_sec = tk.Button(f, text='+1sec', width=6, command=lambda:add_time(time_label, onelap_label, oil_label, totalOil_label, 'sec', 'counter'))
 add_hr_onelap = tk.Button(f, text='+1hr', width=6, command=lambda:add_time(time_label, onelap_label, oil_label, totalOil_label, 'hr', 'onelap'))
 add_min_onelap = tk.Button(f, text='+1min', width=6, command=lambda:add_time(time_label, onelap_label, oil_label, totalOil_label, 'min', 'onelap'))
-add_sec_onelap = tk.Button(f, text='+1sec', width=6, command=lambda:add_time(time_label, onelap_label, oil_label, totalOil_label,, 'sec', 'onelap'))
+add_sec_onelap = tk.Button(f, text='+1sec', width=6, command=lambda:add_time(time_label, onelap_label, oil_label, totalOil_label, 'sec', 'onelap'))
 
 addOil_lite = tk.Button(f, text='+1L', width=6, command=lambda:add_oil(oil_label, onelapOil_label, totalOil_label, 'L', 'oil'))
 addOil_smalllite = tk.Button(f, text='+0.1L', width=6, command=lambda:add_oil(oil_label, onelapOil_label, totalOil_label, '0.1L', 'oil'))
